@@ -1,6 +1,6 @@
 class Instructor::SectionsController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_authorized_for_current_course
+  before_action :require_authorized_for_current_course, only:[:show]
 
   
   def new 
@@ -27,6 +27,7 @@ class Instructor::SectionsController < ApplicationController
       @current_course ||= Course.find(params[:course_id])
     else
       current_section.course
+    end
   end
 
   def section_params
