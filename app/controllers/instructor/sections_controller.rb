@@ -12,6 +12,7 @@ class Instructor::SectionsController < ApplicationController
   def update
     @section = current_course.sections.create(section_params)
     render plain: 'Ok!'
+  end
 
   private
 
