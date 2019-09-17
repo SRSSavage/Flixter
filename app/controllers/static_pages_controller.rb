@@ -1,6 +1,9 @@
 class StaticPagesController < ApplicationController
 
   def index
-	end
+  end
+  
+  def privacy
+  end
 	
 end
